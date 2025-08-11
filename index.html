@@ -6,7 +6,144 @@
     <title>portfolio</title>
 </head>
 <body>
-    <h1>hello world! this is my portfolio</h1>
-     <h2>coming soon with a big suprise</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishesh Sachan - Responsive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Your Name</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" aria-label="Open Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Hello, I'm Vishesh sachan</h1>
+                <p>A passionate software developer crafting scalable, user-friendly digital solutions</p>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Project+1" alt="Project Title 1">
+                        <h3>Project Title 1</h3>
+                        <p>Short description of Project 1, highlighting key features or results.</p>
+                        <a href="#" class="btn btn-secondary">View Case Study</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Project+2" alt="Project Title 2">
+                        <h3>Project Title 2</h3>
+                        <p>Short description of Project 2, highlighting key features or results.</p>
+                        <a href="#" class="btn btn-secondary">View Case Study</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/400x250/cccccc/ffffff?text=Project+3" alt="Project Title 3">
+                        <h3>Project Title 3</h3>
+                        <p>Short description of Project 3, highlighting key features or results.</p>
+                        <a href="#" class="btn btn-secondary">View Case Study</a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <img src="https://via.placeholder.com/300/dddddd/ffffff?text=Your+Photo" alt="Your Photo" class="profile-photo">
+                    <div>
+                        <p>Hi there! I'm [Your Name], a passionate [Your Profession] with [Number] years of experience in [Your Industry]. I love [mention a hobby or interest related to your work, e.g., solving complex problems through elegant code, creating intuitive user interfaces, capturing beautiful moments].</p>
+                        <p>My expertise includes: [List 3-5 key skills, e.g., HTML, CSS, JavaScript, React, UI/UX Design, Photography, Content Writing, SEO]. I'm always eager to learn new technologies and take on challenging projects that allow me to grow and deliver impactful results.</p>
+                        <p>Feel free to browse my work or <a href="#contact">get in touch</a> to discuss your next project!</p>
+                        <a href="your-resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind or just want to say hello? Fill out the form below or connect with me on social media.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><img src="https://via.placeholder.com/30/cccccc/ffffff?text=LI" alt="LinkedIn"></a>
+                    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><img src="https://via.placeholder.com/30/cccccc/ffffff?text=GH" alt="GitHub"></a>
+                    <a href="https://dribbble.com/yourprofile" target="_blank" aria-label="Dribbble"><img src="https://via.placeholder.com/30/cccccc/ffffff?text=DR" alt="Dribbble"></a>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navList = document.querySelector('.nav-list');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Optional: for animation on hamburger icon
+        });
+
+        // Close nav when a link is clicked (for mobile)
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
 </body>
 </html>
